@@ -1,0 +1,354 @@
+/*Developed by Himil Patel (SID - 8971713)*/
+/*Developed by Neet Patel (SID - 8966335)*/
+/*Developed by Urvishkumar Jariwala (SID - 8962495)*/
+/*Developed by Vishva Patel (SID - 8987097)*/
+
+/*=== Universal Background ===*/
+body {
+  background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('/images/bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #f1f1f1;
+  font-family: "Segoe UI", sans-serif;
+  min-height: 100vh;
+  margin: 0;
+}
+
+/*=== Glassmorphism Wrapper ===*/
+.glass-container {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  padding: 2rem;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  margin: 2rem auto;
+  max-width: 1000px;
+}
+
+/*=== Enhanced Navbar ===*/
+.enhanced-navbar {
+  background-color: #0a0f1c !important;
+  padding: 1.2rem 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+}
+
+.navbar-nav .nav-link {
+  color: #f1f1f1 !important;
+  padding: 0.75rem 1.25rem;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.3s;
+  position: relative;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: #0dcaf0 !important;
+}
+
+.navbar-nav .nav-link.active::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color: #0dcaf0;
+  border-radius: 4px;
+}
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.4rem;
+  color: #0dcaf0 !important;
+}
+
+/*=== Enhanced Footer ===*/
+.enhanced-footer {
+  background-color: rgba(0, 0, 0, 0.9);
+  backdrop-filter: blur(8px);
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.enhanced-footer ul {
+  padding-left: 0;
+}
+
+.enhanced-footer li {
+  color: #d1d1d1;
+}
+
+/*=== Forms ===*/
+.form-control,
+.form-select {
+  background-color: rgba(255, 255, 255, 0.07);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: #0dcaf0;
+  box-shadow: 0 0 0 0.2rem rgba(13, 202, 240, 0.25);
+}
+
+.form-label {
+  color: #ced4da;
+}
+
+/*=== Buttons ===*/
+.btn {
+  font-weight: 500;
+}
+
+.btn-info {
+  background-color: #0dcaf0;
+  color: #111;
+  border: none;
+}
+
+.btn-info:hover {
+  background-color: #0bbcd1;
+}
+
+.btn-outline-light:hover,
+.btn-outline-info:hover {
+  background-color: #0dcaf0;
+  color: #111;
+}
+
+/*=== Tables ===*/
+.table-dark {
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #f8f9fa;
+}
+
+.table-dark th {
+  background-color: #0dcaf0;
+  color: #111;
+}
+
+/*=== Quantity Control ===*/
+.qty-control input {
+  background-color: rgba(255, 255, 255, 0.07);
+  color: #f1f1f1;
+  border: 1px solid #444;
+  border-radius: 4px;
+  width: 70px;
+  text-align: center;
+}
+
+/*=== Titles & Headings ===*/
+h2, h3, h4 {
+  color: #0dcaf0;
+  font-weight: 600;
+}
+
+label,
+.table td,
+.cart-totals p {
+  color: #dee2e6;
+}
+
+.cart-totals p,
+.checkout-totals p {
+  font-size: 1.1rem;
+  color: #f8f9fa;
+}
+
+.cart-totals p:nth-child(2) strong,
+.checkout-totals p:nth-child(2) strong {
+  color: #ffc107;
+}
+
+.cart-totals p:nth-child(3) strong,
+.checkout-totals p:nth-child(3) strong {
+  color: #20c997;
+}
+
+/*=== Texts ===*/
+.lead {
+  color: #e0e0e0 !important;
+  font-size: 1.15rem;
+}
+
+.section-title,
+.products-page-header {
+  text-align: center;
+  color: #0dcaf0;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+/*=== Review Section in Checkout ===*/
+.review-item {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #f8f9fa;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 6px;
+}
+
+/*=== Product Grid & Cards ===*/
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.product-card {
+  background: linear-gradient(to bottom, #1a1f27, #222c35);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #f8f9fa;
+  padding: 1rem;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  transform: translateY(40px);
+  min-height: 330px;
+}
+
+.product-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 24px rgba(13, 202, 240, 0.15);
+}
+
+.product-img-container {
+  background-color: #373e47;
+  height: 160px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.product-card-img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.product-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-top: auto;
+}
+
+/*=== Carousel ===*/
+.scrolling-carousel {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding-bottom: 1rem;
+}
+
+.scrolling-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.mini-card {
+  flex: 0 0 auto;
+  width: 250px;
+  background-color: rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  color: #f8f9fa;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mini-card img {
+  max-width: 100%;
+  height: 140px;
+  object-fit: contain;
+  margin-bottom: 0.75rem;
+}
+
+.mini-card h5 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  min-height: 2.2rem;
+}
+
+/*=== Utility ===*/
+.text-cyan {
+  color: #0dcaf0 !important;
+}
+
+.bg-cyan {
+  background-color: #0dcaf0 !important;
+  color: #1f1f1f;
+}
+
+.bg-purple {
+  background-color: #6f42c1 !important;
+  color: white;
+}
+
+hr {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.thankyou,
+.home,
+.cart-totals {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+/*=== Fade-in on Scroll ===*/
+.fade-in-on-scroll {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.6s ease;
+}
+
+.fade-in-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/*=== Toast Message ===*/
+.custom-toast {
+  position: fixed;
+  bottom: 70px;
+  right: 130px;
+  background: #0dcaf0;
+  color: #000;
+  padding: 12px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  font-weight: 500;
+  z-index: 9999;
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
