@@ -14,10 +14,8 @@ const Footer = () => {
                     <div className="col-md-4 mb-2">
                         <strong>Developed By</strong>
                         <ul className="list-unstyled mt-2 small">
-                            <li>Himil Patel (SID - 8971713)</li>
-                            <li>Neet Patel (SID - 8966335)</li>
-                            <li>Urvishkumar Jariwala (SID - 8962495)</li>
-                            <li>Vishva Patel (SID - 8987097)</li>
+                            <li>Himil Patel</li>
+
                         </ul>
                     </div>
 
@@ -38,7 +36,7 @@ const Footer = () => {
                     {/*contact and copyright*/}
                     <div className="col-md-4 mb-2">
                         <strong>Contact</strong>
-                        <p className="small mt-2">email@estore.ca<br />© {new Date().getFullYear()} EStore</p>
+                        <p className="small mt-2">patelhimil555@gmail.com<br />© {new Date().getFullYear()} EStore All Right Reserved</p>
                     </div>
                 </div>
             </div>
