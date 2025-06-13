@@ -18,9 +18,5 @@ Setup and Installation
 
    The app will run at http://localhost:5173
 
-Developers
-
-- Himil Patel (SID - 8971713)
-- Neet Patel (SID - 8966335)
-- Urvishkumar Jariwala (SID - 8962495)
-- Vishva Patel (SID - 8987097)
+Developed By
+- Himil Patel
