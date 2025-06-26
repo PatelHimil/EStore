@@ -10,7 +10,7 @@ const Footer = () => {
                 <h5 className="text-cyan mb-3">EStore - Electronics Simplified</h5>
 
                 <div className="row text-sm">
-                    {/*developer names*/}
+                    {/*developer name*/}
                     <div className="col-md-4 mb-2">
                         <strong>Developed By</strong>
                         <ul className="list-unstyled mt-2 small">
