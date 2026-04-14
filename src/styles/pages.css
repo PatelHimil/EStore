@@ -126,3 +126,10 @@
 .checkout-totals p:last-child strong {
   color: #20c997;
 }
+
+/* FORCE LABEL VISIBILITY */
+.glass-container .form-label {
+  color: #ffffff !important;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
