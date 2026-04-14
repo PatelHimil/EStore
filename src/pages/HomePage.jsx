@@ -65,48 +65,48 @@ const HomePage = () => {
 
     return (
         <div className="container">
-            {/*intro banner*/}
-            <div className="glass-container text-center py-5 fade-in-on-scroll">
-                <h1 className="display-5 fw-bold text-cyan mb-3">
-                    Welcome to <span className="text-info">EStore!</span>
+            {/* HERO SECTION */}
+            <div className="glass-container text-center py-5 fade-in-on-scroll hero-section">
+                <h1 className="hero-title mb-3">
+                    Welcome to <span>EStore</span>
                 </h1>
-                <p className="lead mb-4">
+
+                <p className="hero-subtitle mb-4">
                     Shop the latest electronics:
-                    <span className="text-primary">Phones</span>,{" "}
-                    <span className="text-warning">Earbuds</span>,{" "}
-                    <span className="text-success">Chargers</span> &{" "}
-                    <span className="text-danger">more.</span>
+                    <span className="text-primary"> Phones</span>,
+                    <span className="text-warning"> Earbuds</span>,
+                    <span className="text-success"> Chargers</span> &
+                    <span className="text-danger"> more</span>.
                 </p>
 
-                {/*feature highlights*/}
-                <div className="row justify-content-center mb-4">
-                    <div className="col-md-10">
-                        <div className="d-flex justify-content-around flex-wrap bg-dark rounded p-3 gap-4">
-                            <div className="text-white">
-                                <i className="bi bi-truck fs-4 text-success"></i><br />
-                                Free Shipping
-                            </div>
-                            <div className="text-white">
-                                <i className="bi bi-shield-lock fs-4 text-warning"></i><br />
-                                Secure Checkout
-                            </div>
-                            <div className="text-white">
-                                <i className="bi bi-stars fs-4 text-info"></i><br />
-                                Top Brands
-                            </div>
-                        </div>
+                {/* FEATURE CARDS */}
+                <div className="feature-box">
+                    <div className="feature-item">
+                        <i className="bi bi-truck"></i>
+                        <p>Free Shipping</p>
+                    </div>
+
+                    <div className="feature-item">
+                        <i className="bi bi-shield-lock"></i>
+                        <p>Secure Checkout</p>
+                    </div>
+
+                    <div className="feature-item">
+                        <i className="bi bi-stars"></i>
+                        <p>Top Brands</p>
                     </div>
                 </div>
 
-                {/*browse button*/}
-                <Link to="/products" className="btn btn-info fw-bold px-4 py-2">
-                    Browse Products
+                {/* CTA BUTTON */}
+                <Link to="/products" className="hero-btn mt-4">
+                    Browse Products 🚀
                 </Link>
             </div>
 
-            {/*featured product carousel*/}
+            {/* FEATURED PRODUCTS */}
             <div className="glass-container mt-4 fade-in-on-scroll">
                 <h2 className="section-title">Featured Products</h2>
+
                 <div ref={scrollRef} className="scrolling-carousel">
                     {featured.map((product, index) => (
                         <div
@@ -116,7 +116,9 @@ const HomePage = () => {
                             <img src={product.image} alt={product.name} />
                             <h5>{product.name}</h5>
                             <Link to={`/products/${product.id}`}>
-                                <button className="btn btn-outline-info btn-sm">View</button>
+                                <button className="btn btn-outline-info btn-sm">
+                                    View
+                                </button>
                             </Link>
                         </div>
                     ))}

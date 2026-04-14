@@ -64,6 +64,117 @@ img {
   color: #0dcaf0 !important;
 }
 
+/*=== HERO SECTION ===*/
+
+.hero-section {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Glow background effect */
+.hero-section::before {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(13,202,240,0.2), transparent 70%);
+  top: -100px;
+  left: -100px;
+  filter: blur(60px);
+}
+
+/* Title */
+.hero-title {
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.hero-title span {
+  color: #0dcaf0;
+  text-shadow: 0 0 15px rgba(13,202,240,0.6);
+}
+
+/* Subtitle */
+.hero-subtitle {
+  font-size: 1.2rem;
+  color: #d1d5db;
+}
+
+/*=== FEATURE BOX ===*/
+
+.feature-box {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  border-radius: 14px;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+
+  padding: 1.5rem;
+  gap: 1.5rem;
+  margin-top: 20px;
+}
+
+/* Feature item */
+.feature-item {
+  text-align: center;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.feature-item i {
+  font-size: 1.8rem;
+  margin-bottom: 6px;
+}
+
+/* Hover animation */
+.feature-item:hover {
+  transform: translateY(-6px) scale(1.05);
+  color: #0dcaf0;
+}
+
+.feature-item:hover i {
+  text-shadow: 0 0 12px rgba(13,202,240,0.8);
+}
+
+/*=== CTA BUTTON ===*/
+
+.hero-btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #0dcaf0, #20c997);
+  color: #111;
+  padding: 12px 28px;
+  border-radius: 10px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+/* Hover */
+.hero-btn:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(13,202,240,0.4);
+  color: #111;
+}
+
+.display-5 {
+  text-shadow: 0 0 15px rgba(13, 202, 240, 0.3);
+}
+
+/* hover effect */
+.feature-item:hover {
+  transform: translateY(-5px);
+  color: #0dcaf0;
+}
+
+.feature-item:hover i {
+  text-shadow: 0 0 10px rgba(13, 202, 240, 0.7);
+}
+
 /*=== FOOTER ===*/
 .enhanced-footer {
   margin-top: auto;
