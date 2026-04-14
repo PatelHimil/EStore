@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { products } from "../data/products";
 import ProductCard from "../components/ProductCard";
 
@@ -77,7 +77,7 @@ const ProductsPage = () => {
                         ))
                     ) : (
                         <div className="text-center mt-5">
-                            <p className="text-warning">No products found.</p>
+                            <p className="text-warning">No products found matching your search or category.</p>
                         </div>
                     )}
                 </div>

@@ -23,6 +23,7 @@ const ProductCard = ({ product }) => {
                     src={product.image}
                     alt={product.name}
                     className="product-card-img"
+                    loading="lazy"
                 />
             </div>
 
@@ -34,7 +35,7 @@ const ProductCard = ({ product }) => {
                 {/*action buttons*/}
                 <div className="product-buttons mt-3">
                     <button className="btn btn-outline-info" onClick={handleAdd}>
-                        Add
+                        Add to Cart
                     </button>
                     <Link to={`/products/${product.id}`} className="btn btn-outline-light">
                         Details
@@ -45,7 +46,7 @@ const ProductCard = ({ product }) => {
             {/*show toast when item added*/}
             {showToast && (
                 <Toast
-                    message={`added to cart!`}
+                    message={`${product.name} added to cart!`}
                     onClose={() => setShowToast(false)}
                 />
             )}

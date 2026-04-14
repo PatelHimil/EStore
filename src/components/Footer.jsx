@@ -34,7 +34,7 @@ const Footer = () => {
                     {/*contact and copyright*/}
                     <div className="col-md-4 mb-2">
                         <strong>Contact</strong>
-                        <p className="small mt-2">patelhimil@gmail.com<br />© {new Date().getFullYear()} EStore All Rights Reserved</p>
+                        <p className="small mt-2">patelhimil555@gmail.com<br />© {new Date().getFullYear()} EStore All Rights Reserved</p>
                     </div>
                 </div>
             </div>

@@ -19,7 +19,19 @@ const CheckoutPage = () => {
 
     //handle user input change
     const handleChange = (e) => {
-        setForm(prev => ({ ...prev, [e.target.name]: e.target.value }));
+        const { name, value } = e.target;
+
+        if (["phone", "card", "cvv"].includes(name)) {
+            setForm(prev => ({ ...prev, [name]: value.replace(/\D/g, "") }));
+            return;
+        }
+
+        if (name === "pin") {
+            setForm(prev => ({ ...prev, [name]: value.toUpperCase() }));
+            return;
+        }
+
+        setForm(prev => ({ ...prev, [name]: value }));
     };
 
     //handle form submit with basic validation
@@ -55,8 +67,8 @@ const CheckoutPage = () => {
             { threshold: 0.15 }
         );
 
-        const el = document.querySelector(".fade-in-on-scroll");
-        if (el) observer.observe(el);
+        const elements = document.querySelectorAll(".fade-in-on-scroll");
+        elements.forEach(el => observer.observe(el));
         return () => observer.disconnect();
     }, []);
 
@@ -117,6 +129,7 @@ const CheckoutPage = () => {
                         <input
                             name="phone"
                             className="form-control"
+                            type="tel"
                             maxLength="10"
                             value={form.phone}
                             onChange={handleChange}
@@ -154,6 +167,7 @@ const CheckoutPage = () => {
                         <label className="form-label">Card Number</label>
                         <input
                             name="card"
+                            inputMode="numeric"
                             className="form-control"
                             maxLength="16"
                             value={form.card}
@@ -167,6 +181,7 @@ const CheckoutPage = () => {
                         <label className="form-label">CVV</label>
                         <input
                             name="cvv"
+                            inputMode="numeric"
                             type="password"
                             className="form-control"
                             maxLength="3"

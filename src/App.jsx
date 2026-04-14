@@ -15,15 +15,16 @@ const App = () => (
         <Navbar />
 
         {/*route configuration*/}
-        <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/products" element={<ProductsPage />} />
-            <Route path="/products/:id" element={<ProductDetailPage />} />
-            <Route path="/cart" element={<CartPage />} />
-            <Route path="/checkout" element={<CheckoutPage />} />
-            <Route path="/thankyou" element={<ThankYouPage />} />
-        </Routes>
-
+        <main>
+            <Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route path="/products" element={<ProductsPage />} />
+                <Route path="/products/:id" element={<ProductDetailPage />} />
+                <Route path="/cart" element={<CartPage />} />
+                <Route path="/checkout" element={<CheckoutPage />} />
+                <Route path="/thankyou" element={<ThankYouPage />} />
+            </Routes>
+        </main>
         {/*footer always visible*/}
         <Footer />
     </>

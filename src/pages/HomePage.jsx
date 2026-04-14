@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { products } from "../data/products";
 
 //shuffle products and pick 6
-const original = products.sort(() => 0.5 - Math.random()).slice(0, 6);
+const original = [...products].sort(() => 0.5 - Math.random()).slice(0, 6);
 
 //duplicate to enable looping scroll
 const featured = [...original, ...original];
@@ -80,10 +80,8 @@ const HomePage = () => {
                 </div>
 
                 {/*browse button*/}
-                <Link to="/products">
-                    <button className="btn btn-info fw-bold px-4 py-2">
-                        Browse Products
-                    </button>
+                <Link to="/products" className="btn btn-info fw-bold px-4 py-2">
+                    Browse Products
                 </Link>
             </div>
 

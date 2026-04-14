@@ -9,7 +9,7 @@ const ProductDetailPage = () => {
     const { id } = useParams();
 
     //find matching product from product list
-    const product = products.find(p => p.id === parseInt(id));
+    const product = products.find(p => p.id === parseInt(id, 10));
 
     const { addToCart } = useCart();
 
@@ -33,8 +33,8 @@ const ProductDetailPage = () => {
             { threshold: 0.2 }
         );
 
-        const el = document.querySelector(".fade-in-on-scroll");
-        if (el) observer.observe(el);
+        const elements = document.querySelectorAll(".fade-in-on-scroll");
+        elements.forEach(el => observer.observe(el));
         return () => observer.disconnect();
     }, []);
 
@@ -69,6 +69,7 @@ const ProductDetailPage = () => {
                             alt={product.name}
                             className="img-fluid rounded shadow"
                             style={{ maxHeight: "350px", objectFit: "contain" }}
+                            loading="lazy"
                         />
                     </div>
 
@@ -85,7 +86,10 @@ const ProductDetailPage = () => {
                                 type="number"
                                 className="form-control bg-dark text-white text-center"
                                 value={qty}
-                                onChange={(e) => setQty(Number(e.target.value))}
+                                onChange={(e) => {
+                                    const value = Number(e.target.value);
+                                    setQty(value >= 1 ? value : 1);
+                                }}
                                 style={{ width: "80px" }}
                                 min="1"
                             />

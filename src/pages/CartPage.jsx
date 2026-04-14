@@ -8,7 +8,7 @@ const CartPage = () => {
 
     //update item quantity based on input
     const updateQty = (id, newQty) => {
-        const qty = Math.max(1, parseInt(newQty) || 1);
+        const qty = Math.max(1, Number(newQty) || 1);
         setCart(prev => prev.map(item => item.id === id ? { ...item, quantity: qty } : item));
     };
 
@@ -29,8 +29,8 @@ const CartPage = () => {
             { threshold: 0.15 }
         );
 
-        const el = document.querySelector(".fade-in-on-scroll");
-        if (el) observer.observe(el);
+        const elements = document.querySelectorAll(".fade-in-on-scroll");
+        elements.forEach(el => observer.observe(el));
         return () => observer.disconnect();
     }, []);
 
@@ -40,7 +40,7 @@ const CartPage = () => {
             <div className="container">
                 <div className="glass-container text-center fade-in-on-scroll">
                     <h2 className="section-title">Your Cart</h2>
-                    <p className="text-light">Your cart is empty.</p>
+                    <p className="text-light">Your cart is empty. Add some products to continue shopping.</p>
                     <button
                         className="btn btn-outline-info mt-3"
                         onClick={() => navigate("/products")}
@@ -61,7 +61,11 @@ const CartPage = () => {
                     <table className="table table-dark table-striped align-middle">
                         <thead>
                             <tr>
-                                <th>Product</th><th>Qty</th><th>Price</th><th>Total</th><th></th>
+                                <th>Product</th>
+                                <th>Qty</th>
+                                <th>Price</th>
+                                <th>Total</th>
+                                <th>Action</th>
                             </tr>
                         </thead>
                         <tbody>

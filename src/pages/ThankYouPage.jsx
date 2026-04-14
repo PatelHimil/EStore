@@ -16,8 +16,8 @@ const ThankYouPage = () => {
             { threshold: 0.2 }
         );
 
-        const el = document.querySelector(".fade-in-on-scroll");
-        if (el) observer.observe(el);
+        const elements = document.querySelectorAll(".fade-in-on-scroll");
+        elements.forEach(el => observer.observe(el));
 
         return () => observer.disconnect();
     }, []);
@@ -31,10 +31,8 @@ const ThankYouPage = () => {
                 <hr className="border border-info w-25 mx-auto" />
 
                 {/*explore more products button*/}
-                <Link to="/products">
-                    <button className="btn btn-info fw-bold mt-4 px-4">
-                        Explore More Products
-                    </button>
+                <Link to="/products" className="btn btn-info fw-bold mt-4 px-4">
+                    Explore More Products
                 </Link>
             </div>
         </div>

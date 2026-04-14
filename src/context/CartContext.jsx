@@ -14,7 +14,11 @@ export const CartProvider = ({ children }) => {
     useEffect(() => {
         const storedCart = localStorage.getItem("estore_cart");
         if (storedCart) {
-            setCart(JSON.parse(storedCart));
+            try {
+                setCart(JSON.parse(storedCart));
+            } catch {
+                localStorage.removeItem("estore_cart");
+            }
         }
     }, []);
 
@@ -51,7 +55,8 @@ export const CartProvider = ({ children }) => {
         );
         const tax = +(subtotal * 0.13).toFixed(2);
         const total = +(subtotal + tax).toFixed(2);
-        return { subtotal, tax, total };
+        const roundedSubtotal = +subtotal.toFixed(2);
+        return { subtotal: roundedSubtotal, tax, total };
     };
 
     return (
