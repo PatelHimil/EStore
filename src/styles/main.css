@@ -324,6 +324,79 @@ h1, h2, h3, h4, h5 {
   animation: slideIn 0.3s ease-out;
 }
 
+/*=== CHECKOUT IMPROVEMENTS ===*/
+
+/* Review section box */
+.review-item {
+  border: 1px solid rgba(13, 202, 240, 0.25);
+  background: rgba(13, 202, 240, 0.05);
+  color: #f8f9fa;
+  padding: 0.9rem 1.2rem;
+  margin-bottom: 0.6rem;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+/* Subtotal + tax */
+.checkout-totals p {
+  font-size: 1.1rem;
+  color: #cfd8dc;
+  margin: 4px 0;
+}
+
+/* Subtotal highlight */
+.checkout-totals p:nth-child(1) strong {
+  color: #0dcaf0;
+}
+
+/* Tax highlight */
+.checkout-totals p:nth-child(2) strong {
+  color: #ffc107;
+}
+
+/* 🔥 TOTAL (make it POP) */
+.checkout-totals p:last-child {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.checkout-totals p:last-child strong {
+  color: #20c997;
+}
+
+/* Divider line */
+.checkout-totals {
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 10px;
+  margin-top: 10px;
+}
+
+/* Improve labels */
+.form-label {
+  color: #e0e0e0;
+  font-weight: 500;
+}
+
+/* Inputs better look */
+.form-control {
+  background: rgba(255,255,255,0.08);
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.form-control:focus {
+  background: rgba(255,255,255,0.12);
+}
+
+/* Confirm button upgrade */
+.btn-info {
+  box-shadow: 0 4px 14px rgba(13, 202, 240, 0.3);
+}
+
+.btn-info:hover {
+  transform: translateY(-2px);
+}
+
 @keyframes slideIn {
   from {
     transform: translateY(50%);

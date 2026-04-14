@@ -99,14 +99,19 @@ const CheckoutPage = () => {
                 <div className="mb-4">
                     <h5 style={{ color: "#f8f9fa" }}>Review Your Items:</h5>
                     {cart.map(item => (
-                        <div key={item.id} className="review-item">
-                            {item.name} × {item.quantity || 1} — ${item.price.toFixed(2)} each
+                        <div className="review-item d-flex justify-content-between">
+                            <span>
+                                {item.name} × {item.quantity || 1}
+                            </span>
+                            <span className="text-info fw-bold">
+                                ${(item.price * (item.quantity || 1)).toFixed(2)}
+                            </span>
                         </div>
                     ))}
                     <div className="checkout-totals mt-3">
                         <p>Subtotal: <strong>${subtotal.toFixed(2)}</strong></p>
                         <p>Tax (13%): <strong>${tax.toFixed(2)}</strong></p>
-                        <p className="fs-5">Total: <strong>${total.toFixed(2)}</strong></p>
+                        <p>Total: <strong>${total.toFixed(2)}</strong></p>
                     </div>
                 </div>
 
@@ -194,8 +199,8 @@ const CheckoutPage = () => {
 
                     {/*submit button*/}
                     <div className="col-12 mt-3">
-                        <button type="submit" className="btn btn-info fw-bold px-4">
-                            <i className="bi bi-check2-circle me-1"></i> Confirm Order
+                        <button type="submit" className="btn btn-info fw-bold px-4 py-2">
+                            Confirm Order 🚀
                         </button>
                     </div>
                 </form>
