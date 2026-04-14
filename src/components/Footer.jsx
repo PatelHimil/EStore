@@ -1,5 +1,3 @@
-//Developed by Vishva Patel (SID - 8987097)
-
 import React from "react";
 
 const Footer = () => {
@@ -7,7 +5,7 @@ const Footer = () => {
         <footer className="enhanced-footer text-center text-light pt-4 pb-3 mt-5">
             <div className="container">
                 {/*branding*/}
-                <h5 className="text-cyan mb-3">EStore - Electronics Simplified</h5>
+                <h5 className="text-cyan mb-3">EStore — Electronics Made Simple</h5>
 
                 <div className="row text-sm">
                     {/*developer name*/}
@@ -36,7 +34,7 @@ const Footer = () => {
                     {/*contact and copyright*/}
                     <div className="col-md-4 mb-2">
                         <strong>Contact</strong>
-                        <p className="small mt-2">patelhimil555@gmail.com<br />© {new Date().getFullYear()} EStore All Right Reserved</p>
+                        <p className="small mt-2">patelhimil555@gmail.com<br />© {new Date().getFullYear()} EStore All Rights Reserved</p>
                     </div>
                 </div>
             </div>

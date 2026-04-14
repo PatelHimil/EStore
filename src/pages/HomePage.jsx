@@ -1,5 +1,3 @@
-//Developed by Himil Patel (SID - 8971713)
-
 import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { products } from "../data/products";

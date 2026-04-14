@@ -1,5 +1,3 @@
-//Developed by Himil Patel (SID - 8971713)
-
 import React from "react";
 import { NavLink, Link } from "react-router-dom";
 import { useCart } from "../context/CartContext";
@@ -8,7 +6,7 @@ const Navbar = () => {
     const { cart } = useCart();
 
     //calculate total item count from cart
-    const itemCount = cart.reduce((acc, item) => acc + (item.quantity || 1), 0);
+    const itemCount = cart.reduce((acc, item) => acc + (item.quantity ?? 1), 0);
 
     return (
         <nav className="navbar navbar-expand-lg enhanced-navbar">
@@ -19,8 +17,16 @@ const Navbar = () => {
                 </Link>
 
                 {/*mobile nav toggle button*/}
-                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                    <span className="navbar-toggler-icon text-white"></span>
+                <button
+                    className="navbar-toggler border-info"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav"
+                    aria-controls="navbarNav"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <i className="bi bi-list text-info fs-2"></i>
                 </button>
 
                 {/*nav links*/}

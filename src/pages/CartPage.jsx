@@ -1,5 +1,3 @@
-//Developed by Neet Patel (SID - 8966335)
-
 import React, { useEffect } from "react";
 import { useCart } from "../context/CartContext";
 import { useNavigate } from "react-router-dom";

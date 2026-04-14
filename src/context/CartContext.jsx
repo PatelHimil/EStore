@@ -1,5 +1,3 @@
-//Developed by Neet Patel (SID - 8966335)
-
 import React, { createContext, useContext, useEffect, useState } from "react";
 
 //create context for cart

@@ -1,6 +1,3 @@
-//Developed by Urvishkumar Jariwala (SID - 8962495)
-//Developed by Himil Patel (SID - 8971713)
-
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useCart } from "../context/CartContext";

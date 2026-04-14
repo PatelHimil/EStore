@@ -1,8 +1,3 @@
-//Developed by Himil Patel (SID - 8971713)
-//Developed by Urvishkumar Jariwala (SID - 8962495)
-//Developed by Vishva Patel (SID - 8987097)
-//Developed by Neet Patel (SID - 8966335)
-
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";

@@ -1,5 +1,3 @@
-//Developed by Himil Patel, Urvishkumar Jariwala, Neet Patel, Vishva Patel.
-
 export const products = [
     {
       id: 1,

@@ -1,5 +1,3 @@
-//Developed by Himil Patel (SID - 8971713)
-
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";

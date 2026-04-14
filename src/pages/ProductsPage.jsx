@@ -1,5 +1,3 @@
-//Developed by Urvishkumar Jariwala (SID - 8962495)
-
 import React, { useEffect, useRef, useState } from "react";
 import { products } from "../data/products";
 import ProductCard from "../components/ProductCard";

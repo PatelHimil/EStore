@@ -1,6 +1,3 @@
-//Developed by Urvishkumar Jariwala (SID - 8962495)
-//Developed by Himil Patel (SID - 8971713)
-
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { products } from "../data/products";

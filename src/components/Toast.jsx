@@ -1,5 +1,3 @@
-//Developed by Urvishkumar Jariwala (SID - 8962495)
-
 import React, { useEffect } from "react";
 
 const Toast = ({ message, onClose }) => {
