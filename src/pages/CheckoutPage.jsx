@@ -17,16 +17,22 @@ const CheckoutPage = () => {
     });
 
     const handleChange = (e) => {
-        const { name, value } = e.target;
+        let { name, value } = e.target;
 
+        // numbers only fields
         if (["phone", "card", "cvv"].includes(name)) {
-            setForm(prev => ({ ...prev, [name]: value.replace(/\D/g, "") }));
-            return;
+            value = value.replace(/\D/g, "");
         }
 
+        // PIN formatting (A1A1A1)
         if (name === "pin") {
-            setForm(prev => ({ ...prev, [name]: value.toUpperCase() }));
-            return;
+            value = value.toUpperCase();
+
+            // allow only A-Z and 0-9
+            value = value.replace(/[^A-Z0-9]/g, "");
+
+            // limit to 6 characters
+            value = value.slice(0, 6);
         }
 
         setForm(prev => ({ ...prev, [name]: value }));
@@ -115,7 +121,15 @@ const CheckoutPage = () => {
                     <div className="col-md-6">
                         <div className="form-group with-icon">
                             <i className="bi bi-telephone"></i>
-                            <input name="phone" value={form.phone} onChange={handleChange} required />
+                            <input
+                                name="phone"
+                                value={form.phone}
+                                onChange={handleChange}
+                                maxLength="10"
+                                pattern="\d{10}"
+                                inputMode="numeric"
+                                required
+                            />
                             <label>Phone Number</label>
                         </div>
                     </div>
@@ -130,7 +144,14 @@ const CheckoutPage = () => {
 
                     <div className="col-md-4">
                         <div className="form-group">
-                            <input name="pin" value={form.pin} onChange={handleChange} required />
+                            <input
+                                name="pin"
+                                value={form.pin}
+                                onChange={handleChange}
+                                maxLength="6"
+                                pattern="[A-Za-z]\d[A-Za-z]\d[A-Za-z]\d"
+                                required
+                            />
                             <label>PIN Code</label>
                         </div>
                     </div>
@@ -138,14 +159,31 @@ const CheckoutPage = () => {
                     <div className="col-md-8">
                         <div className="form-group with-icon">
                             <i className="bi bi-credit-card"></i>
-                            <input name="card" value={form.card} onChange={handleChange} required />
+                            <input
+                                name="card"
+                                value={form.card}
+                                onChange={handleChange}
+                                maxLength="16"
+                                pattern="\d{16}"
+                                inputMode="numeric"
+                                required
+                            />
                             <label>Card Number</label>
                         </div>
                     </div>
 
                     <div className="col-md-4">
                         <div className="form-group">
-                            <input type="password" name="cvv" value={form.cvv} onChange={handleChange} required />
+                            <input
+                                type="password"
+                                name="cvv"
+                                value={form.cvv}
+                                onChange={handleChange}
+                                maxLength="3"
+                                pattern="\d{3}"
+                                inputMode="numeric"
+                                required
+                            />
                             <label>CVV</label>
                         </div>
                     </div>
