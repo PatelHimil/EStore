@@ -1,0 +1,128 @@
+/* pages.css */
+
+/* HERO */
+.hero-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(13,202,240,0.2), transparent 70%);
+  top: -100px;
+  left: -100px;
+  filter: blur(60px);
+}
+
+.hero-title {
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.hero-title span {
+  color: #0dcaf0;
+  text-shadow: 0 0 15px rgba(13,202,240,0.6);
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  color: #d1d5db;
+}
+
+/* FEATURE */
+.feature-box {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  border-radius: 14px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 1.5rem;
+  gap: 1.5rem;
+  margin-top: 20px;
+}
+
+.feature-item {
+  text-align: center;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.feature-item i {
+  font-size: 1.8rem;
+  margin-bottom: 6px;
+}
+
+.feature-item:hover {
+  transform: translateY(-6px) scale(1.05);
+  color: #0dcaf0;
+}
+
+.feature-item:hover i {
+  text-shadow: 0 0 12px rgba(13,202,240,0.8);
+}
+
+/* CTA */
+.hero-btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #0dcaf0, #20c997);
+  color: #111;
+  padding: 12px 28px;
+  border-radius: 10px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.hero-btn:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(13,202,240,0.4);
+  color: #111;
+}
+
+/* CHECKOUT */
+.review-item {
+  border: 1px solid rgba(13,202,240,0.25);
+  background: rgba(13,202,240,0.05);
+  padding: 0.9rem;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.review-item span:first-child {
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.checkout-totals {
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 10px;
+}
+
+.checkout-totals p {
+  color: #cfd8dc;
+}
+
+.checkout-totals p:nth-child(1) strong {
+  color: #0dcaf0;
+}
+
+.checkout-totals p:nth-child(2) strong {
+  color: #ffc107;
+}
+
+.checkout-totals p:last-child {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.checkout-totals p:last-child strong {
+  color: #20c997;
+}
