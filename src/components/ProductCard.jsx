@@ -30,7 +30,7 @@ const ProductCard = ({ product }) => {
             {/*info section*/}
             <div className="product-card-info">
                 <h5 className="card-title mt-3">{product.name}</h5>
-                <p className="text-info fw-bold">${product.price.toFixed(2)}</p>
+                <p className="product-price">${product.price.toFixed(2)}</p>
 
                 {/*action buttons*/}
                 <div className="product-buttons mt-3">
