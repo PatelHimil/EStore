@@ -168,11 +168,9 @@ h1, h2, h3, h4, h5 {
   border-radius: 14px;
   padding: 1.2rem;
   min-height: 340px;
-
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
   position: relative;
   overflow: hidden;
   transition: 0.35s;
@@ -182,9 +180,15 @@ h1, h2, h3, h4, h5 {
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at top left, rgba(13,202,240,0.15), transparent 60%);
+  background: radial-gradient(circle at top left, rgba(13, 202, 240, 0.15), transparent 60%);
   opacity: 0;
   transition: 0.4s;
+  pointer-events: none;
+}
+
+.product-card > * {
+  position: relative;
+  z-index: 1;
 }
 
 .product-card:hover::before {
@@ -193,7 +197,7 @@ h1, h2, h3, h4, h5 {
 
 .product-card:hover {
   transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 12px 30px rgba(13,202,240,0.25);
+  box-shadow: 0 12px 30px rgba(13, 202, 240, 0.25);
 }
 
 /* PRODUCT IMAGE */
