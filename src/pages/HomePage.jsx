@@ -14,15 +14,34 @@ const HomePage = () => {
     //auto-scroll carousel horizontally
     useEffect(() => {
         const scroll = scrollRef.current;
-        const interval = setInterval(() => {
-            if (scroll) {
-                scroll.scrollLeft += 2;
-                if (scroll.scrollLeft >= scroll.scrollWidth / 2) {
-                    scroll.scrollLeft = 0;
+        let interval;
+
+        const startScroll = () => {
+            interval = setInterval(() => {
+                if (scroll) {
+                    scroll.scrollLeft += 0.5;
+                    if (scroll.scrollLeft >= scroll.scrollWidth / 2) {
+                        scroll.scrollLeft = 0;
+                    }
                 }
+            }, 20);
+        };
+
+        const stopScroll = () => clearInterval(interval);
+
+        if (scroll) {
+            startScroll();
+            scroll.addEventListener("mouseenter", stopScroll);
+            scroll.addEventListener("mouseleave", startScroll);
+        }
+
+        return () => {
+            clearInterval(interval);
+            if (scroll) {
+                scroll.removeEventListener("mouseenter", stopScroll);
+                scroll.removeEventListener("mouseleave", startScroll);
             }
-        }, 15);
-        return () => clearInterval(interval);
+        };
     }, []);
 
     //fade-in animation on scroll into view
