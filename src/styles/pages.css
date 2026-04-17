@@ -316,3 +316,18 @@
     transform: translateY(0);
   }
 }
+
+/* ================= MOBILE FIX FOR SCROLL ANIMATION ================= */
+
+@media (max-width: 768px) {
+
+  .glass-container {
+    overflow: visible !important;
+  }
+
+  .fade-in-on-scroll {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+}
